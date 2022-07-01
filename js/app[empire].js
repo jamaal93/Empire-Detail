@@ -46,7 +46,7 @@ function navActive() { //this function adds an active style to the navigation li
     sections.forEach(current => { //loop to store height, id, and elements top boundary
         activeSectionId = current.getAttribute("id"); // stores the id of the section element in view
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
+        const sectionTop = current.offsetTop - 100;
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { //adds or removes the class 'active' from the navigation link based on the position of the currect section on the screen
             document.querySelector(".navbar__menu a[href*=" + activeSectionId + "]").classList.add("active");
         } else {
@@ -58,7 +58,7 @@ function navActive() { //this function adds an active style to the navigation li
 function activeSection() { //add class 'active' to section when near top of viewport
     for(const section of sections) { //calls the 'sections' array stores the internal elements as 'section' to be looped when called
     const box = section.getBoundingClientRect(); //stores the viewport position of each 'section'
-    if(box.top <= 150 && box.bottom >= 100) {
+    if(box.top <= 100 && box.bottom >= 100) {
     section.classList.add("your-active-class");
     } else {
     section.classList.remove("your-active-class");

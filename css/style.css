@@ -114,7 +114,7 @@ header {
     padding: 0px;
     top: 0;
     background-color: black;
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
 }
 
@@ -203,13 +203,18 @@ li a:hover {
 }
 
 /*----------------------Mobile-------------------------*/
-@media only screen and (max-width:666px) {
+@media only screen and (max-width:680px) {
     #burger-menu {
         display: block; 
     }
 
+    #logo {
+        white-space: nowrap;
+    }
+
     #navbar__list {
         display: none;
+        width: 100vw;     
     }
 
     .menu__links a {
@@ -222,17 +227,18 @@ li a:hover {
 
     .section {
         margin-right: 10px;
-        margin-top: 0px;
-        margin-bottom: 180px;
+        margin-top: 40px;
+        margin-bottom: 300px;
         padding-top: 60px;
-        padding-bottom: 60px 0px;
+        padding-bottom: 80px;
         overflow: auto;
         margin: 20px 0px;
     }
 
     #toggle:checked + #navbar__list {
-        display: block;
-        text-align: center;
-        margin-top: 30px;
+        display: inline-block;
+        text-align: right;
+        clear: both;
+
     }
 }
